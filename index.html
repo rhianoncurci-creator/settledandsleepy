@@ -731,7 +731,7 @@ footer{
     <div style="max-width:600px;margin:46px auto 0;text-align:center">
       <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:25px;color:#6B4A2E;margin-bottom:12px">Prefer to meet in person?</h3>
       <p style="font-size:14px;color:var(--text-light);line-height:1.75;margin-bottom:22px">Some things just make more sense face to face. With any of my services, we can go through your personalised plan together in person rather than over a call, from the comfort of your home or over a coffee at a local caf&eacute;, so you leave feeling calm, confident and sure of your next steps. Available across the Illawarra.</p>
-      <button type="button" class="btn-primary" onclick="chooseInPerson(this)">Add an in-person catch-up</button>
+      <a href="#contact" class="btn-primary" style="display:inline-block;text-decoration:none" onclick="chooseInPerson(this)">Add an in-person catch-up</a>
     </div>
   </div>
 </section>
@@ -832,7 +832,7 @@ footer{
 
   <div id="pane-contact" class="tab-pane" style="display:none">
     <!-- ============ CONTACT ============ -->
-<section style="background:var(--linen-dark);padding:80px 5vw;box-sizing:border-box;width:100%">
+<section id="contact" style="background:var(--linen-dark);padding:80px 5vw;box-sizing:border-box;width:100%">
   <div style="width:100%;max-width:1400px;margin:0 auto">
     <div class="contact-grid">
       <div class="contact-info">
@@ -901,7 +901,7 @@ footer{
 </footer>
 
 <script>
-function chooseInPerson(btn){var c=document.getElementById('inPersonCheck');if(c){c.checked=true;}if(btn){btn.textContent='In-person added ✓';}var target=document.getElementById('contactForm');if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}}
+function chooseInPerson(el){var c=document.getElementById('inPersonCheck');if(c){c.checked=true;}if(el){el.textContent='In-person added ✓';}}
 // ── Tab system ──
 function showTab(name) {
   // Hide all panes
